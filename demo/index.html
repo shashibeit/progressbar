@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <script src="progress.js">
+
+    </script>
+</head>
+<style>
+    .btn {
+        display: inline-block;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        color: #fff;
+        background-color: #06273b;
+        height: 48px;
+        line-height: 26px;
+        min-width: 128px;
+        border-radius: 24px;
+        padding: 0 24px;
+        border: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        text-decoration: none;
+        cursor: pointer;
+        outline: none;
+        border: 5px solid #06273b;
+    }
+
+    .btn:hover,
+    button.btn:hover {
+        background-color: #FFF;
+        color: #06273b;
+        outline: none;
+    }
+
+    .btn:active,
+    a.btn:active,
+    button.btn:active {
+        background-color: #FFF;
+        outline: none;
+    }
+
+    .btn-download {
+        display: inline-block;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #03d496;
+        height: 48px;
+        line-height: 26px;
+        min-width: 128px;
+        border-radius: 24px;
+        padding: 0 24px;
+        border: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        text-decoration: none;
+        cursor: pointer;
+        border: 5px solid #03d496;
+    }
+
+    .btn-download:hover {
+        background-color: #FFF;
+        color: #03d496;
+        outline: none;
+    }
+
+    .btn-download:active {
+        background-color: #FFF;
+        outline: none;
+    }
+
+    html {
+        font-size: 12px;
+        line-height: 36px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 100;
+        height: 100%;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #06273b;
+    }
+
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .info-label {
+        font-family: 'Varela Round', sans-serif;
+        font-size: 18px;
+    }
+
+    .container-info {
+        margin-top: 90px;
+        text-align: center;
+    }
+
+    .btn-group {
+        margin-top: 90px;
+    }     
+
+    .download-btn-group {
+        margin-top: 50px;
+    }
+</style>
+
+<body>
+
+    <div class="container-info">
+        <h1>Progress.js</h1>
+        <label class="info-label">Lightweight javascript nanoscopic progress bar.</label><br>
+        <label class="info-label">Animation that shows something is in process.</label>
+        <div class="btn-group">
+            <button class="btn" onClick="return Start();">Progress.start()</button>
+            <button class="btn" onClick="return set(40);">Progress.go(40)</button>
+            <button class="btn" onClick="return set(80);">Progress.go(80)</button>
+            <button class="btn" onClick="return complete();">Progress.complete()</button>
+        </div>
+        <div class="download-btn-group">
+            <button onclick="redirect()" class="btn-download">Download</button>
+        </div>
+    </div>  
+</body>
+
+</html>
+<script>
+    function redirect(){
+        window.location.href="https://github.com/shashibeit/Progressbar";
+
+    }
+    function Start() {
+        Progress.start();
+    }
+    function set(value) {
+        Progress.go(value);
+    }
+
+    function increament() {
+        Progress.increament();
+    }
+
+    function complete() {
+        Progress.complete();
+    }
+
+</script>
