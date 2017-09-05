@@ -16,8 +16,11 @@ Afterwords call `Progress.start()`, `Progress.go(<percent%>)` and `Progress.comp
 
 ~~~ js
 Progress.start();
-Progress.done();
-Progress.go(<percent%>);
+Progress.go(20);
+Progress.go(30);
+Progress.go(80);
+Progress.go(100);
+Progress.complete();
 ~~~
 
 # Configurations
