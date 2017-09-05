@@ -138,13 +138,17 @@
             <button class="btn" onClick="return complete();">Progress.complete()</button>
         </div>
         <div class="download-btn-group">
-            <button class="btn-download">Download</button>
+            <button onClick="redirect()" class="btn-download">Download</button>
         </div>
     </div>   
 </body>
 
 </html>
 <script>
+	function redirect(){
+		window.location.href="https://github.com/shashibeit/progressbar";
+	}
+	
     Progress.configure({ "color": ['#06273b'] });
     function Start() {
         Progress.start();
