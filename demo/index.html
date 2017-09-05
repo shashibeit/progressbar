@@ -103,6 +103,9 @@
         background-size: cover;
         background-repeat: no-repeat;
         color: #06273b;
+		background:-webkit-linear-gradient(315deg,rgba(0,170,255,0.1),rgba(220,110,10,0.2) 80%);
+		background:-moz-linear-gradient(315deg,rgba(0,170,255,0.1),rgba(220,110,10,0.2) 80%);
+		background:linear-gradient(315deg,rgba(0,170,255,0.1),rgba(220,110,10,0.2) 80%);	
     }
 
 
@@ -122,7 +125,42 @@
 
     .btn-group {
         margin-top: 90px;
-    }     
+    }
+
+    .docs {
+        margin-top: 50px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .docs>h2 {
+        font-family: 'Varela Round', sans-serif;
+        text-align: left;
+        margin-left: 15%;
+        font-size: 32px;
+        font-weight: bolder;
+    }
+
+    .docs>div {
+        margin: auto;
+        width: 70%;
+        height: 200px;
+        background-color: #06273b;
+        border-radius: 10px;
+        color: #FFF;
+        padding-left: 10px;
+    }
+
+    .usage-container>p {
+        font-weight: 700;
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .usage-container>span {
+        font-weight: 700;
+        font-size: 16px;
+    }
 
     .download-btn-group {
         margin-top: 50px;
@@ -142,17 +180,21 @@
             <button class="btn" onClick="return complete();">Progress.complete()</button>
         </div>
         <div class="download-btn-group">
-            <button onclick="redirect()" class="btn-download">Download</button>
+            <button class="btn-download">Download</button>
         </div>
-    </div>  
+    </div>
+    <!-- <div class="docs">
+        <h2>Usage</h2>
+        <div class="usage-container">
+            <p >Configure progress bar </p>
+            <span >Progress.configure({"property":"value"})</div>
+        </div>
+    </div> -->
 </body>
 
 </html>
 <script>
-    function redirect(){
-        window.location.href="https://github.com/shashibeit/Progressbar";
-
-    }
+    Progress.configure({ "color": ['#06273b'] });
     function Start() {
         Progress.start();
     }
