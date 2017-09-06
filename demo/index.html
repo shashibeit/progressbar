@@ -79,15 +79,18 @@
         cursor: pointer;
         border: 5px solid #03d496;
     }
+
     .btn-download:hover {
         background-color: #FFF;
         color: #03d496;
         outline: none;
     }
+
     .btn-download:active {
         background-color: #FFF;
         outline: none;
     }
+
     html {
         font-size: 12px;
         line-height: 36px;
@@ -100,14 +103,15 @@
         background-size: cover;
         background-repeat: no-repeat;
         color: #06273b;
-		background:-webkit-linear-gradient(315deg,rgba(0,170,255,0.1),rgba(220,110,10,0.2) 80%);
-		background:-moz-linear-gradient(315deg,rgba(0,170,255,0.1),rgba(220,110,10,0.2) 80%);
-		background:linear-gradient(315deg,rgba(0,170,255,0.1),rgba(220,110,10,0.2) 80%);	
+        background: -webkit-linear-gradient(315deg, rgba(0, 170, 255, 0.1), rgba(220, 110, 10, 0.2) 80%);
+        background: -moz-linear-gradient(315deg, rgba(0, 170, 255, 0.1), rgba(220, 110, 10, 0.2) 80%);
+        background: linear-gradient(315deg, rgba(0, 170, 255, 0.1), rgba(220, 110, 10, 0.2) 80%);
     }
 
     h1 {
         font-size: 48px;
     }
+
     .info-label {
         font-family: 'Varela Round', sans-serif;
         font-size: 18px;
@@ -117,11 +121,42 @@
         margin-top: 90px;
         text-align: center;
     }
+
     .btn-group {
         margin-top: 90px;
     }
+
     .download-btn-group {
         margin-top: 50px;
+    }
+
+    .git-buttons {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .offset>div {
+        display: inline;
+    }
+
+    @media screen and (max-width: 767px) {
+        .btn-group {
+            margin-top: 10px;
+        }
+        .btn-group>.offset>div>button {
+            font-size: 10px;
+           
+        }
+        .download-btn-group {
+            margin-top: 10px;
+        }
+        .download-btn-group>button {
+            margin-top: 10px;
+            font-size: 10px;
+        }
+        .offset {
+            padding: 20px;
+        }   
     }
 </style>
 
@@ -132,23 +167,37 @@
         <label class="info-label">Lightweight javascript nanoscopic progress bar.</label><br>
         <label class="info-label">Animation that shows something is in process.</label>
         <div class="btn-group">
-            <button class="btn" onClick="return Start();">Progress.start()</button>
-            <button class="btn" onClick="return set(40);">Progress.go(40)</button>
-            <button class="btn" onClick="return set(80);">Progress.go(80)</button>
-            <button class="btn" onClick="return complete();">Progress.complete()</button>
+            <div class="offset">
+                <div>
+                    <button class="btn" onClick="return Start();">Progress.start()</button>
+                    <button class="btn" onClick="return set(40);">Progress.go(40)</button>
+                </div>
+                <div class="second-group">
+                    <button class="btn" onClick="return set(80);">Progress.go(80)</button>
+                    <button class="btn" onClick="return complete();">Progress.complete()</button>
+                </div>
+            </div>
         </div>
         <div class="download-btn-group">
             <button onClick="redirect()" class="btn-download">Download</button>
         </div>
-    </div>   
+        <div class="git-buttons">
+            <iframe src="https://ghbtns.com/github-btn.html?user=shashibeit&repo=progressbar&type=fork&count=true&size=large" frameborder="0"
+                scrolling="0" width="158px" height="30px"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=shashibeit&repo=progressbar&type=star&count=true&size=large" frameborder="0"
+                scrolling="0" width="160px" height="30px"></iframe>
+            <iframe src="https://ghbtns.com/github-btn.html?user=shashibeit&type=follow&count=true&size=large" frameborder="0" scrolling="0"
+                width="220px" height="30px"></iframe>
+        </div>
+    </div>
 </body>
 
 </html>
 <script>
-	function redirect(){
-		window.location.href="https://github.com/shashibeit/progressbar";
-	}
-	
+    function redirect() {
+        window.location.href = "https://github.com/shashibeit/progressbar";
+    }
+
     Progress.configure({ "color": ['#06273b'] });
     function Start() {
         Progress.start();
