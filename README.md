@@ -3,7 +3,7 @@ Lightweight javascript nanoscopic progress bar.</br>
 Animation that shows something is in process.</br>
 Usable for the ajax applications.</br>
 
-#Usage
+# Usage
 
 Add `progress.js` to your project.
 
